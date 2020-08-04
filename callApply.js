@@ -25,12 +25,18 @@ const heroFriend = {
     salary: 25000,
 }
 
-// Binding normalPerson's chargeBill function with heroPerson
-console.log(heroPerson.salary);
-const heroBillCharge = normalPerson.chargeBill.bind(heroPerson);
-heroBillCharge(3000);
-console.log(heroPerson.salary);
+//Bind ------------------------------------
 
-// Binding normalPerson's getFullName function with herofriend
-const heroFriendFullName = normalPerson.getFullName.bind(heroFriend);
-console.log(heroFriendFullName());
+// // Binding normalPerson's chargeBill function with heroPerson
+// console.log(heroPerson.salary);
+// const heroBillCharge = normalPerson.chargeBill.bind(heroPerson);
+// heroBillCharge(3000);
+// console.log(heroPerson.salary);
+
+// // Binding normalPerson's getFullName function with herofriend
+// const heroFriendFullName = normalPerson.getFullName.bind(heroFriend);
+// console.log(heroFriendFullName());  
+
+// Call-----------------------
+normalPerson.chargeBill.call(heroPerson, 1200);
+console.log(heroPerson.salary);
